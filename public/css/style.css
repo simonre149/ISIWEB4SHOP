@@ -1,0 +1,31 @@
+.price
+{
+    color: green;
+}
+
+tr
+{
+    line-height: 50px;
+    min-height: 50px;
+    height: 50px;
+}
+
+.remove-card-item
+{
+    min-height: 50px;
+    min-width: 50px;
+    height: 50px;
+}
+
+.navbar, .btn
+{
+    background-color: #ff776e;
+    border-color: #ff776e;
+    color: white;
+}
+
+.btn:hover
+{
+    background-color: #c9524b;
+    border-color: #c9524b;
+}
