@@ -19,6 +19,26 @@ class OrderRepository extends ServiceEntityRepository
         parent::__construct($registry, Order::class);
     }
 
+    public function findOneBySessionId($session_id)
+    {
+        return $this->createQueryBuilder('o')
+            ->andWhere('o.session_id = :session_id')
+            ->setParameter('session_id', $session_id)
+            ->getQuery()
+            ->getOneOrNullResult()
+            ;
+    }
+
+    public function findAllOrderedByStatus()
+    {
+        return $this->createQueryBuilder('o')
+            ->andWhere('o.status != 10')
+            ->orderBy('o.id', 'DESC')
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
     // /**
     //  * @return Order[] Returns an array of Order objects
     //  */

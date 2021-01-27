@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>Adresse de livraison</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mt-4" style="text-align: center">
+                {% if app.user %}
+                <h6>Votre adresse enregistrée : </h6>
+                <p>{{ address_line1 }}</p>
+                <p>{{ address_line2 }}</p>
+                <p>{{ app.user.postcode }}</p>
+                <p>{{ app.user.city }}</p>
+                <a class="btn" href="{{ path('order_payment') }}">Utiliser cette adresse</a>
+                 <h6 class="mt-5">Ou utiliser une autre adresse :</h6>
+                {% endif %}
+                <form method="post" action="{{ path('order_payment') }}">
+                    <div class="col-6 mx-auto">
+                        <input class="form-control" name="line1" placeholder="Ligne 1..." required>
+                    </div>
+                    <div class="col-6 mx-auto">
+                        <input class="form-control" name="line2" placeholder="Ligne 2... (facultatif)">
+                    </div>
+                    <div class="col-6 mx-auto">
+                        <input class="form-control" name="postcode" placeholder="Code postal..." required>
+                    </div>
+                    <div class="col-6 mx-auto">
+                        <input class="form-control" name="city" placeholder="Ville..." required>
+                    </div>
+
+                    <button type="submit" class="btn mt-3">Utiliser cette adresse</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

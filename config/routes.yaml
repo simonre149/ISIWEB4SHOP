@@ -2,6 +2,11 @@ home:
   path: /
   controller: App\Controller\HomeController::home
 
+#CATEGORIES
+categorie:
+  path: /category/{category_id}
+  controller: App\Controller\CategoriesController::show_category
+
 #PRODUCT
 show_product:
   path: /product/{id}
@@ -15,3 +20,45 @@ show_cart:
 add_to_cart:
   path: /add_to_cart/{product_id}
   controller: App\Controller\CartController::add_to_cart
+
+remove_from_cart:
+  path: /remove_from_cart/{product_id}
+  controller: App\Controller\CartController::remove_from_cart
+
+#ORDER
+order_address:
+  path: /order/address
+  controller: App\Controller\OrderController::order_address_page
+
+order_payment:
+  path: /order/payment
+  controller: App\Controller\OrderController::order_payment_page
+
+order_cancelled:
+  path: /order/cancel
+  controller: App\Controller\OrderController::order_cancelled
+
+order_succeeded:
+  path: /order/succeed
+  controller: App\Controller\OrderController::order_succeeded
+
+order_by_cheque:
+  path: /order/succeed/cheque
+  controller: App\Controller\OrderController::order_succeeded_cheque
+
+order_sent:
+  path: /order/order-sent/{order_id}
+  controller: App\Controller\OrderController::order_sent
+
+#SECURITY
+security_registration:
+  path: /registration
+  controller: App\Controller\SecurityController::registration
+
+security_login:
+  path: /login
+  controller: App\Controller\SecurityController::login
+
+security_logout:
+  path: /logout
+  controller: App\Controller\SecurityController::logout

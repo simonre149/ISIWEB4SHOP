@@ -18,8 +18,20 @@
                                 <a class="nav-link active" aria-current="page" href="{{ path('home') }}">Accueil</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Panier</a>
+                                <a class="nav-link active" href="{{ path('show_cart') }}">Panier</a>
                             </li>
+                            {% if app.user %}
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="{{ path('security_logout') }}">Se déconnecter</a>
+                                </li>
+                            {% else %}
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="{{ path('security_login') }}">Se connecter</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="{{ path('security_registration') }}">S'inscrire</a>
+                                </li>
+                            {% endif %}
                         </ul>
                     </div>
                 </div>

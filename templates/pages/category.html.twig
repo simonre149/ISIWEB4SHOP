@@ -1,23 +1,9 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    <h1>ISIWEB4SHOP</h1>
-    <p class="lead">Votre site de vente favori !</p>
+    <h1>{{ category.name }}</h1>
     <div class="container">
-        <div class="container-fluid">
-            <div class="row mx-auto mt-3 mb-3" style="text-align: center">
-                <div class="col-md-4">
-                    <a class="btn" href="{{ path('categorie', {category_id : '1'}) }}">Boissons</a>
-                </div>
-                <div class="col-md-4">
-                    <a class="btn" href="{{ path('categorie', {category_id : '2'}) }}">Biscuits</a>
-                </div>
-                <div class="col-md-4">
-                    <a class="btn" href="{{ path('categorie', {category_id : '3'}) }}">Fruits secs</a>
-                </div>
-            </div>
-        </div>
         <div class="row flex">
-            {% for product in all_products %}
+            {% for product in products %}
                 <div class="col-3 mt-4">
                     <div class="card" style="width: 18rem;">
                         <img src="{{ asset('images/' ~ product.image) }}" class="card-img-top" alt="#">
@@ -32,5 +18,4 @@
             {% endfor %}
         </div>
     </div>
-    <br>
 {% endblock %}

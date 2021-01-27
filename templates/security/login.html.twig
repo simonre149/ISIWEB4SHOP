@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>Connexion</h1>
+
+    <form class="col-sm-4 mx-auto" action="{{ path('security_login') }}" method="post">
+        {% if error %}
+            <input placeholder="Email..." required name="_username" type="text" class="form-control is-invalid">
+            <input placeholder="Mot de passe..." required name="_password" type="password" class="form-control is-invalid">
+            <div class="invalid-feedback">
+                Nom d'utilisateur ou mot de passe erroné.
+            </div>
+        {% else %}
+            <div class="form-group" style="margin: 20px">
+                <input type="text" placeholder="Email..." required name="_username" class="form-control">
+            </div>
+            <div class="form-group" style="margin: 20px">
+                <input type="password" placeholder="Mot de passe..." required name="_password" class="form-control">
+            </div>
+        {% endif %}
+        <div class="form-group" style="margin: 20px; text-align: center">
+            <button type="submit" class="btn">Connexion</button>
+            ou
+            <a href="{{ path('security_registration') }}" style="color: black" role="button">
+                <u>s'inscrire</u>
+            </a>
+            si vous n'avez pas encore de compte.
+        </div>
+    </form>
+{% endblock %}

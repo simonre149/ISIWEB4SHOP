@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>Administration</h1>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-bordered table-striped" style="text-align: center">
+                    <thead>
+                    <tr>
+                        <th scope="col">Statut</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">ID de session</th>
+                        <th scope="col">L'utilisateur est enregistré</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Valider l'envoi de la commande</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for order in all_orders %}
+                        <tr scope="row">
+                            <td>{{ order.status }}</td>
+                            <td>{{ order.total }}€</td>
+                            <td>{{ order.sessionid }}</td>
+                            <td>{% if order.isregistered == 1 %}Oui{% else %}Non{% endif %}</td>
+                            <td>{{ order.date|date('d-m-Y à h:i:s') }}</td>
+                            <td>{% if order.status == 2 %}<a href="{{ path('order_sent', {order_id: order.id}) }}" class="btn">Valider</a>{% endif %}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
