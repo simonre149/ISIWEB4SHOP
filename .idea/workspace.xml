@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca745652-8ea4-4c1b-9798-979f4eca1ef7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210127214138.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210127221228.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210127221731.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Adress.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/AdressRepository.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,20 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-362">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.env">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="138" selection-start-line="29" selection-start-column="138" selection-end-line="29" selection-end-column="138" />
+            <state relative-caret-position="357">
+              <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -201,7 +195,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/apache-pack" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="420" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
@@ -224,47 +218,24 @@
             <path>
               <item name="ISIWEB4SHOP" type="b2602c69:ProjectViewProjectNode" />
               <item name="ISIWEB4SHOP" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ISIWEB4SHOP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ISIWEB4SHOP" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ISIWEB4SHOP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ISIWEB4SHOP" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ISIWEB4SHOP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ISIWEB4SHOP" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ISIWEB4SHOP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ISIWEB4SHOP" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ISIWEB4SHOP" type="b2602c69:ProjectViewProjectNode" />
               <item name="ISIWEB4SHOP" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ISIWEB4SHOP" type="b2602c69:ProjectViewProjectNode" />
               <item name="ISIWEB4SHOP" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ISIWEB4SHOP" type="b2602c69:ProjectViewProjectNode" />
               <item name="ISIWEB4SHOP" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Repository" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -321,12 +292,12 @@
       <workItem from="1611688598715" duration="11557000" />
       <workItem from="1611731927306" duration="599000" />
       <workItem from="1611752532731" duration="8121000" />
-      <workItem from="1611772728598" duration="11633000" />
+      <workItem from="1611772728598" duration="11818000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60595000" />
+    <option name="totallyTimeSpent" value="60780000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -643,8 +614,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="138" selection-start-line="29" selection-start-column="138" selection-end-line="29" selection-end-column="138" />
+        <state relative-caret-position="357">
+          <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
         </state>
       </provider>
     </entry>
