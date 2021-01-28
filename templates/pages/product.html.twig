@@ -1,12 +1,18 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    <h1>{{ product.name }}</h1>
-    <img src="{{ asset('images/' ~ product.image) }} ">
-    <p>{{ product.description }}</p>
-
-    <form action="{{ path('add_to_cart', {product_id : product.id}) }}" method="post">
-        <label for="quantity" class="form-label">Quantité</label>
-        <input class="form-control" id="quantity" name="product_quantity" value="1">
-        <button type="submit" class="btn btn-primary">Acheter</button>
-    </form>
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-6" style="text-align: center;">
+                <img width="500px" src="{{ asset('images/' ~ product.image) }} ">
+            </div>
+            <div class="col-6 px-5">
+                <h1>{{ product.name }}</h1>
+                <p class="mt-5">{{ product.description }}</p>
+                <form class="px-5" action="{{ path('add_to_cart', {product_id : product.id}) }}" method="post">
+                    <input type="number" class="form-control mt-3" id="quantity" name="product_quantity" placeholder="Quantité">
+                    <button type="submit" class="btn btn-primary mt-3">Acheter</button>
+                </form>
+            </div>
+        </div>
+    </div>
 {% endblock %}

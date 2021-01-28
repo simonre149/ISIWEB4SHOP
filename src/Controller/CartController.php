@@ -5,9 +5,7 @@ namespace App\Controller;
 use App\Entity\Order;
 use App\Repository\OrderRepository;
 use App\Repository\ProductRepository;
-use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
-use Doctrine\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -17,7 +15,6 @@ class CartController extends AbstractController
 {
     public function show_cart(SessionInterface $session, ProductRepository $productRepository, OrderRepository $orderRepository, EntityManagerInterface $manager): Response
     {
-
         $panier = $session->get('panier', []); //on récupère le panier (ou un tableau vide si le panier est null)
 
         $panier_with_data = []; //va stocker le panier et toutes les données nécessaires
